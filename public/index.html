@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKV to MP4 Converter</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Upload your MKV file</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="video">Choose MKV file</label>
+            <input type="file" name="video" id="video" accept=".mkv" required>
+            <button type="submit">Convert</button>
+        </form>
+        <div id="loader" class="loader" hidden></div>
+        <progress id="progress-bar" value="0" max="100" hidden></progress>
+        <div id="status">
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
